@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  margin: 0;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: "Qwitcher Grypen", cursive;
+  font-size: 7rem;
+  font-weight: bold;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #121212 inset;
+  box-shadow: 0 0 0px 1000px #121212 inset;
+}
+
+header {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: url("assets/photo.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+form {
+  position: relative;
+  width: 50.5%;
+  max-width: 100%;
+}
+
+form input[type="text"] {
+  border: 1px solid darkslateblue;
+  border-radius: 50px;
+  font-size: 16px;
+  padding: 15px 30px;
+  width: 100%;
+  background-color: #121212;
+  color: #fff;
+  max-height: 10px;
+}
+
+.dropdown {
+  background-color: transparent;
+  width: 20%;
+}
+
+.dropdown .dropdown-menu {
+  left: initial;
+  right: -55vw;
+}
+
+.dropdown-content {
+  width: 50vw;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dropdown-item {
+  color: #fff;
+}
+
+.dynamic-card {
+  width: 50%;
+  background-color: #fff;
+  color: #121212;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  align-items: center;
+  grid-gap: 15px;
+  margin-top: 10%;
+  margin-left: 25%;
+  height: auto;    
+  border-radius: 8px;
+  font-size: 1.2rem;
+  padding: 1%;
+}
+
+.dynamic-card h2 {
+  font-size: 2rem;
+}
+
+.dynamic-card h2,
+h3 {
+  font-weight: bold;
+}
+
+/* MEDIA QUERIES-------------------------------------------------------- */
+
+@media (max-width: 800px) {
+  
+  form {
+    width: 70%;
+  }
+
+  .dropdown {
+    width: 30%;
+  }
+
+  .dropdown-content {
+    width: 70vw;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  header input {
+    width: 70%;
+  }
+
+  .dynamic-card {
+    grid-template-columns: 1fr;
+    font-size: 1rem;
+    grid-gap: 0px;
+    font-size: 0.9rem;
+    margin-top: 5%;
+    height: auto;
+  }
+
+  .dynamic-card h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+  .dynamic-card {
+    grid-template-columns: 1fr;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-top: 5%;
+    height: 100%;
+  }
+
+  .dynamic-card .card__imagen {
+    width: 50%;
+  }
+
+  .dynamic-card h2 {
+    font-size: 1.7rem;
+  }
+}
